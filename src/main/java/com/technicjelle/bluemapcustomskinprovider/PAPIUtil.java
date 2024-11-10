@@ -5,12 +5,12 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public final class PAPIUtil {
-    private PAPIUtil() {}
+	private PAPIUtil() {}
 
-    public static String processPAPI(Player player, String str) {
-        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null && player != null) {
-            return PlaceholderAPI.setPlaceholders(player, str);
-        }
-        else return str;
-    }
+	public static String processPAPI(Player player, String str) {
+		if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null && player != null) {
+			return PlaceholderAPI.setPlaceholders(player, str);
+		}
+		else return str;
+	}
 }
