@@ -60,6 +60,12 @@ public final class BlueMapCustomSkinProvider extends JavaPlugin {
 			localUrl = PAPIUtil.processPAPI(Bukkit.getPlayer(playerUUID), localUrl);
 			getLogger().info("Downloading skin for " + username + " from " + localUrl);
 			BufferedImage img = downloadImage(localUrl);
+			if (img != null) {
+				getLogger().info("Skin has been download for player " + username);
+			}
+			else {
+				getLogger().warning("Failed to download skin for player " + username);
+			}
 			return Optional.ofNullable(img);
 		};
 
